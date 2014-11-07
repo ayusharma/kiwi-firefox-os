@@ -2,11 +2,11 @@
   "version": "1.0",
   "name": "Kiwi",
   "description": "A Dictionary",
-  "launch_path": "/index.html",
+  "launch_path": "/kiwi/index.html",
   "orientation": ["portrait-primary"],
   "icons": {
-    "128": "img/kiwi128.png",
-    "512" :"img/kiwi512.png"
+    "128": "kiwi/img/kiwi128.png",
+    "512" :"kiwi/img/kiwi512.png"
   },
   "developer": {
     "name": "Ayush Sharma",
