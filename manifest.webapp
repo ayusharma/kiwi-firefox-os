@@ -5,8 +5,8 @@
   "launch_path": "/index.html",
   "orientation": ["portrait-primary"],
   "icons": {
-    "128": "/img/kiwi128.png",
-    "512" :"/img/kiwi512.png"
+    "128": "img/kiwi128.png",
+    "512" :"img/kiwi512.png"
   },
   "developer": {
     "name": "Ayush Sharma",
