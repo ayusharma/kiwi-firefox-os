@@ -11,10 +11,10 @@
     {{ aw }}
   </div>
   <div class="item item-text-wrap" style="text-align:center">
-    <!-- <div ng-repeat="audio in event.audios">
-            <audio ng-src="{{audio}}" controls></audio>
-        </div> -->
-      <a class="ion-play" style="font-size:60px;" data-ng-show="playbutton" data-ng-click="playAud()"></a>&nbsp;&nbsp;&nbsp;
+    <div ng-repeat="audio in event.audios">
+        <audio ng-src="{{audio}}" controls></audio>
+    </div>
+      <!-- <a class="ion-play" style="font-size:60px;" data-ng-show="playbutton" data-ng-click="playAud()"></a>&nbsp;&nbsp;&nbsp; -->
       <!-- <a class="ion-stop" style="font-size:45px;" data-ng-click="stopAud"></a>&nbsp;&nbsp;&nbsp;
       <i data-ng-class="{{ spinner }}" style="font-size:45px;"></i> -->
   </div>

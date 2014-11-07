@@ -68,7 +68,7 @@ angular.module('starter.controllers', [])
 	}
 })
 
-.controller('DashAudCtrl', function($scope,$http) {
+.controller('DashAudCtrl', function($scope,$http,$sce) {
 	if(recword == null){
 		$scope.hand = true;
 		$scope.playbutton = false;
@@ -78,18 +78,19 @@ angular.module('starter.controllers', [])
 		$http({method: 'GET', url: 'http://api.wordnik.com:80/v4/word.json/'+encodeURI(recword)+'/audio?useCanonical=false&limit=1&api_key=a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5'}).success(function(data){
 			$scope.aud = data;
 			var audk = data;
+			$scope.audd = audk[0].fileUrl;
 			$scope.ayush = false;
 			$scope.aw = recword;
-// $scope.event = { 'audios': [
-//       	$sce.trustAsResourceUrl($scope.audd)
-//   ]	};
-$scope.hand = false;
-$scope.playbutton = true;
-$scope.audd = audk[0].fileUrl;
-var media = new Media($scope.audd);
-$scope.playAud =function(){ 
-	media.play();
-}
+$scope.event = { 'audios': [
+      	$sce.trustAsResourceUrl($scope.audd)
+  ]	};
+// $scope.hand = false;
+// $scope.playbutton = true;
+// $scope.audd = audk[0].fileUrl;
+// var media = new Media($scope.audd);
+// $scope.playAud =function(){ 
+// 	media.play();
+// }
 
 }).error(function(data){
 	$scope.ayush = false;
