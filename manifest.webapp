@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "name": "Kiwi",
+  "description": "A Dictionary",
+  "launch_path": "/index.html",
+  "orientation": ["portrait-primary"],
+  "icons": {
+    "128": "/img/kiwi128.png",
+    "512" :"/img/kiwi512.png"
+  },
+  "developer": {
+    "name": "Ayush Sharma",
+    "url": "http://kiwi.ayusharma.in"
+  },
+  "default_locale": "en"
+}
