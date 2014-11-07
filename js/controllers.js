@@ -211,24 +211,24 @@ $scope.newWord = function(){
 .controller('AccountCtrl', function($scope) {
 })
 
-.controller('PopupCtrl',function($scope,$interval) {	
-	$scope.is_online = true;
-	$interval(function() {
-		var networkState = navigator.connection.type;
-		$scope.is_online = networkState !== Connection.UNKNOWN && networkState !== Connection.NONE;
-	}, 1000);
+.controller('PopupCtrl',function($scope,$rootScope,$window) {	
+	//scope.is_online = true;
+	// $interval(function() {
+	// 	var networkState = navigator.connection.type;
+	// 	$scope.is_online = networkState !== Connection.UNKNOWN && networkState !== Connection.NONE;
+	// }, 1000);
 
-// $rootScope.online = navigator.onLine;
-//      $window.addEventListener("offline", function () {
-//        $rootScope.$apply(function() {
-//          $scope.is_online = true;
-//        });
-//      }, false);
-//      $window.addEventListener("online", function () {
-//        $rootScope.$apply(function() {
-//         $scope.is_online = false;
-//        });
-//      }, false);
+$rootScope.online = navigator.onLine;
+     $window.addEventListener("offline", function () {
+       $rootScope.$apply(function() {
+         $scope.is_online = true;
+       });
+     }, false);
+     $window.addEventListener("online", function () {
+       $rootScope.$apply(function() {
+        $scope.is_online = false;
+       });
+     }, false);
 
 	 // $interval(function() {
   //       navigator.splashscreen.hide();
